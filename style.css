@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #271548;
+    background-color: #271548; /* Fond violet foncé */
     color: #333;
 }
 
@@ -46,6 +46,7 @@ h1 {
     font-size: 36px;
     color: #fad053; /* Jaune EPSI */
     margin-bottom: 10px;
+    text-align: center;
 }
 
 h2 {
@@ -108,10 +109,11 @@ input[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #003e7e;
+    background-color: #003e7e; /* Couleur plus sombre à l'hover */
 }
 
 textarea {
@@ -123,8 +125,9 @@ textarea {
 
 .et-rotate {
     font-size: 16px;
-    color: #0054a6;
+    color: #0054a6; /* Bleu EPSI pour le lien */
     cursor: pointer;
+    text-align: center;
 }
 
 .et-rotate:hover {
