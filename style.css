@@ -1,0 +1,153 @@
+/* Général */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #271548;
+    color: #333;
+}
+
+/* Wrapper */
+
+.et-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Page Styling */
+
+.et-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.et-page-current {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Titres */
+
+h1 {
+    font-size: 36px;
+    color: #fad053; /* Jaune EPSI */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #1a2b3c; /* Gris foncé */
+}
+
+/* Textes et liens */
+
+em {
+    color: #1a2b3c; /* Gris foncé */
+}
+
+.coords {
+    font-size: 16px;
+    color: #333;
+}
+
+a {
+    color: #fad053; /* Jaune EPSI */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Formulaire de contact */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #fad053; /* Jaune EPSI */
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #fad053; /* Jaune EPSI */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #003e7e;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+/* Retour lien */
+
+.et-rotate {
+    font-size: 16px;
+    color: #0054a6;
+    cursor: pointer;
+}
+
+.et-rotate:hover {
+    color: #003e7e;
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .et-wrapper {
+        padding: 10px;
+    }
+
+    form {
+        max-width: 100%;
+    }
+}
