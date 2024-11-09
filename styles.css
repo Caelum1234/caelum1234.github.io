@@ -1,0 +1,93 @@
+
+
+body, h1, h2, p, ul, li {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+body {
+font-family: 'Arial', sans-serif; 
+line-height: 1.6; 
+background-color: #f4f4f4; 
+color: #333; 
+}
+
+header {
+background: #35424a; 
+padding: 10px 0; 
+}
+nav .menu {
+display: flex; 
+justify-content: center; 
+}
+nav .menu li {
+margin: 0 15px; 
+}
+nav .menu a {
+color: #ffffff; 
+text-decoration: none; 
+font-weight: bold; 
+transition: color 0.3s; 
+}
+nav .menu a:hover {
+color: #e84545; 
+}
+
+main {
+padding: 20px; 
+}
+section {
+margin-bottom: 20px; 
+background: #ffffff; 
+padding: 15px; 
+border-radius: 8px; 
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+h2 {
+color: #35424a; 
+}
+
+form {
+display: flex; 
+flex-direction: column; 
+}
+form label {
+margin: 10px 0 5px; 
+form input, form textarea {
+padding: 10px; 
+border: 1px solid #ccc; 
+border-radius: 4px; 
+}
+form button {
+margin-top: 10px; 
+padding: 10px; 
+background: #35424a; 
+color: #ffffff; 
+border: none; 
+border-radius: 4px; 
+cursor: pointer; 
+transition: background 0.3s; 
+}
+form button:hover {
+background: #e84545; 
+}
+
+footer {
+text-align: center; 
+padding: 20px; 
+background: #35424a; 
+color: #ffffff; 
+}
+
+@media (max-width: 768px) {
+nav .menu {
+flex-direction: column; 
+}
+nav .menu li {
+margin: 5px 0; 
+}
+form {
+padding: 10px; 
+}
+}}
