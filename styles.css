@@ -1,93 +1,170 @@
-
-
-body, h1, h2, p, ul, li {
-margin: 0;
-padding: 0;
-list-style: none;
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
+/* Style général */
 body {
-font-family: 'Arial', sans-serif; 
-line-height: 1.6; 
-background-color: #f4f4f4; 
-color: #333; 
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 20px;
 }
 
+/* En-tête et Menu */
 header {
-background: #35424a; 
-padding: 10px 0; 
-}
-nav .menu {
-display: flex; 
-justify-content: center; 
-}
-nav .menu li {
-margin: 0 15px; 
-}
-nav .menu a {
-color: #ffffff; 
-text-decoration: none; 
-font-weight: bold; 
-transition: color 0.3s; 
-}
-nav .menu a:hover {
-color: #e84545; 
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #03dac5;
+    color: #121212;
+}
+
+/* Conteneur principal */
 main {
-padding: 20px; 
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
+
+/* Style des sections */
 section {
-margin-bottom: 20px; 
-background: #ffffff; 
-padding: 15px; 
-border-radius: 8px; 
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-}
-h2 {
-color: #35424a; 
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #292929;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-form {
-display: flex; 
-flex-direction: column; 
+section:hover {
+    transform: translateY(-10px);
 }
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #03dac5;
+}
+
+section p, section ul {
+    margin-bottom: 20px;
+}
+
+ul li {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* Style des liens */
+a {
+    color: #bb86fc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #03dac5;
+}
+
+/* Formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 form label {
-margin: 10px 0 5px; 
+    font-weight: bold;
+    color: #bb86fc;
+}
+
 form input, form textarea {
-padding: 10px; 
-border: 1px solid #ccc; 
-border-radius: 4px; 
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #03dac5;
+    border-radius: 8px;
+    padding: 12px;
+    transition: border-color 0.3s ease;
 }
+
+form input:focus, form textarea:focus {
+    border-color: #bb86fc;
+    outline: none;
+}
+
 form button {
-margin-top: 10px; 
-padding: 10px; 
-background: #35424a; 
-color: #ffffff; 
-border: none; 
-border-radius: 4px; 
-cursor: pointer; 
-transition: background 0.3s; 
+    background-color: #03dac5;
+    color: #121212;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 form button:hover {
-background: #e84545; 
+    background-color: #bb86fc;
 }
 
+/* Pied de page */
 footer {
-text-align: center; 
-padding: 20px; 
-background: #35424a; 
-color: #ffffff; 
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #999;
+    margin-top: 60px;
+    border-radius: 10px;
 }
 
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Effets Responsives */
 @media (max-width: 768px) {
-nav .menu {
-flex-direction: column; 
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section {
+        padding: 15px;
+    }
 }
-nav .menu li {
-margin: 5px 0; 
-}
-form {
-padding: 10px; 
-}
-}}
