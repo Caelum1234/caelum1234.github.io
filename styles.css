@@ -1,4 +1,4 @@
-/* Reset de base */
+/* Styles généraux */
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +6,34 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    padding-left: 220px; /* Laisser de la place pour la navigation */
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Thème sombre */
+    color: #e0e0e0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2 {
+    color: #f5b042; /* Couleur dorée pour les titres */
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 /* Navigation latérale */
@@ -17,54 +41,60 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
     height: 100%;
-    background-color: #333;
-    padding-top: 40px;
+    width: 220px;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
 }
 
 .sidebar ul {
     list-style: none;
-    text-align: center;
+    padding-left: 20px;
 }
 
-.sidebar ul li {
-    margin: 20px 0;
+.sidebar li {
+    margin-bottom: 20px;
 }
 
-.sidebar ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    transition: background-color 0.3s;
+.sidebar a {
+    font-size: 1.2rem;
+    color: #f5b042;
+    transition: color 0.3s;
 }
 
-.sidebar ul li a:hover {
-    background-color: #007acc;
+.sidebar a:hover {
+    color: #ffffff;
 }
 
 /* Section d'accueil */
 .hero {
+    margin-left: 240px;
     text-align: center;
-    padding: 60px 20px;
-    background-color: #007acc;
-    color: #fff;
+    padding: 100px 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #b0b0b0;
 }
 
 /* Sections */
 .section {
-    padding: 40px;
-    margin: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    margin-left: 240px;
+    padding: 60px 20px;
+    max-width: 800px;
+    border-bottom: 1px solid #333;
 }
 
-/* Carrousel */
+/* Carousel */
 .carousel {
     position: relative;
     overflow: hidden;
+    max-width: 100%;
 }
 
 .carousel-inner {
@@ -74,51 +104,102 @@ body {
 
 .carousel-item {
     min-width: 100%;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
 .carousel-item img {
-    max-width: 100%;
+    max-width: 80%;
+    height: auto;
     border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    font-size: 1.1rem;
+    color: #b0b0b0;
 }
 
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #007acc;
-    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
     border: none;
-    padding: 10px;
+    color: #f5b042;
+    font-size: 2rem;
     cursor: pointer;
+    padding: 10px;
+    transition: background 0.3s;
 }
 
-.carousel-btn.prev {
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
     left: 10px;
 }
 
-.carousel-btn.next {
+.next {
     right: 10px;
 }
 
+/* Formulaire de contact */
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 20px;
 }
 
-form input, form textarea, form button {
+label {
+    font-size: 1rem;
+    color: #f5b042;
+}
+
+input, textarea {
     padding: 10px;
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #e0e0e0;
     border-radius: 5px;
-    border: 1px solid #ddd;
 }
-form button {
-    background-color: #007acc;
-    color: #fff;
+
+input:focus, textarea:focus {
+    border-color: #f5b042;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #f5b042;
+    border: none;
+    color: #121212;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
 }
-form button:hover {
-    background-color: #005fa3;
+
+button:hover {
+    background-color: #ffaa00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+        padding: 20px 0;
+    }
+
+    .hero, .section {
+        margin-left: 200px;
+        padding: 40px 10px;
+    }
+
+    .carousel-item img {
+        max-width: 100%;
+    }
 }
