@@ -1,235 +1,124 @@
-/* ==========================
-   RESET DE BASE
-========================== */
+/* Reset de base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f7f8fc;
+    background-color: #f8f9fa;
     color: #333;
-    line-height: 1.6;
-    padding-top: 70px; /* Laisser de l'espace pour le menu fixe */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-left: 220px; /* Laisser de la place pour la navigation */
 }
 
-/* ==========================
-   NAVIGATION
-========================== */
-header {
-    background-color: #333;
+/* Navigation latérale */
+.sidebar {
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 40px;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
+.sidebar ul {
     list-style: none;
-    padding: 15px;
+    text-align: center;
 }
 
-nav ul li {
-    margin: 0 20px;
+.sidebar ul li {
+    margin: 20px 0;
 }
 
-nav ul li a {
+.sidebar ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-    transform: translateY(-3px);
-}
-
-/* ==========================
-   SECTIONS GÉNÉRALES
-========================== */
-.section {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-.section h2 {
-    color: #007acc;
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
-
-.section h2::after {
-    content: '';
+    padding: 10px;
     display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #007acc;
-    margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
-/* ==========================
-   ACCUEIL
-========================== */
-.home {
+.sidebar ul li a:hover {
+    background-color: #007acc;
+}
+
+/* Section d'accueil */
+.hero {
     text-align: center;
+    padding: 60px 20px;
     background-color: #007acc;
     color: #fff;
-    padding: 80px 20px;
-    margin-top: 60px;
-    border-radius: 0;
-    transition: background-color 0.3s ease;
 }
 
-.home h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-out forwards;
-}
-
-.home p {
-    font-size: 1.2rem;
-    opacity: 0;
-    animation: fadeIn 1.5s ease-out forwards;
-    animation-delay: 0.5s;
-}
-
-/* Animation pour la section Accueil */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ==========================
-   PROJETS
-========================== */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    background-color: #f0f0f0;
-    padding: 20px;
+/* Sections */
+.section {
+    padding: 40px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Carrousel */
+.carousel {
+    position: relative;
     overflow: hidden;
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.project-card h3 {
-    color: #007acc;
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    opacity: 0.9;
-}
-
-/* ==========================
-   COMPÉTENCES
-========================== */
-.skills-list {
+.carousel-inner {
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    list-style: none;
+    transition: transform 0.5s ease;
 }
 
-.skills-list li {
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: #007acc;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 8px;
+    border: none;
+    padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.skills-list li:hover {
-    background-color: #005fa3;
-    transform: scale(1.1);
+.carousel-btn.prev {
+    left: 10px;
 }
 
-/* ==========================
-   CONTACT
-========================== */
+.carousel-btn.next {
+    right: 10px;
+}
+
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-form label {
-    font-weight: bold;
-}
-
-form input, form textarea {
-    padding: 12px;
-    border: 2px solid #ddd;
+form input, form textarea, form button {
+    padding: 10px;
     border-radius: 5px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
 }
-
-form input:focus, form textarea:focus {
-    border-color: #007acc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 form button {
     background-color: #007acc;
     color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s;
 }
-
 form button:hover {
     background-color: #005fa3;
-    transform: translateY(-3px);
-}
-
-/* ==========================
-   PIED DE PAGE
-========================== */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    margin-top: 60px;
-    transition: background-color 0.3s ease;
-}
-
-footer p {
-    font-size: 0.9rem;
 }
