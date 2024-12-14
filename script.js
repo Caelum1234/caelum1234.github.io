@@ -143,7 +143,6 @@ const projectData = {
             { text: "Téléchargement", link: "puissance4.py" }
         ]
     },
-
     "Projet 5": {
         title: "QCMaster",
         description: `
@@ -188,33 +187,6 @@ galleryItems.forEach(img => {
         }
     });
 });
-
-function showProjectDetails(projectId) {
-    const project = projects[projectId];
-
-    // Remplir le titre et la description
-    document.getElementById("details-title").innerHTML = project.title;
-    document.getElementById("details-description").innerHTML = project.description;
-
-    // Générer les boutons
-    const buttonsContainer = document.getElementById("details-buttons");
-    buttonsContainer.innerHTML = ""; // Vider les anciens boutons
-
-    project.buttons.forEach(button => {
-        const btn = document.createElement("a");
-        btn.textContent = button.text;
-        btn.href = button.link;
-        btn.download = ""; // Force le téléchargement
-        btn.className = "project-button"; // Ajouter une classe pour styliser
-        buttonsContainer.appendChild(btn);
-    });
-
-    // Afficher la section des détails
-    document.getElementById("project-details").classList.remove("hidden");
-}
-
-// Exemple d'appel (appelle cette fonction dynamiquement selon l'interaction utilisateur)
-showProjectDetails("Projet 4");
 
 // Fermer les détails lorsqu’on clique sur la croix
 closeDetails.addEventListener("click", () => {
