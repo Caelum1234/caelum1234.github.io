@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Redwan Berki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./competences.html">Compétences</a></li>
+                <li><a href="./projets.html">Projets</a></li>
+                <li><a href="./cv.html">CV</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Mes Projets</h1>
+            <div class="project-gallery">
+                <div class="project-card" data-project="Agenda EPSI" data-description="Un projet de gestion d'agenda pour les étudiants de l'EPSI.">
+                    <img src="images/agenda.jpg" alt="Projet 1">
+                    <h3>Agenda EPSI</h3>
+                </div>
+                <div class="project-card" data-project="Star Wars" data-description="Un projet sur l'univers Star Wars, utilisant une API">
+                    <img src="images/projet2.jpg" alt="Projet 2">
+                    <h3>Star Wars</h3>
+                </div>
+                <div class="project-card" data-project="Projet Voyage" data-description="Une plateforme pour organiser et gérer des voyages en équipe.">
+                    <img src="images/projet3.jpg" alt="Projet 3">
+                    <h3>Projet Voyage</h3>
+                </div> 
+                <div class="project-card" data-project="Projet Resto" data-description="Un site de restaurant monté avec wordpress">
+                    <img src="images/projet4.jpg" alt="Projet 4">
+                    <h3>Restauration WordPress</h3>
+                </div>
+                <div class="project-card" data-project="Projet Serveur Web" data-description="Mise en place d'une infrastructure réseau pouvant héberger un site internet">
+                    <img src="images/projet5.jpg" alt="Projet 5">
+                    <h3>Infra Serveur Web</h3>
+                </div>
+                <div class="project-card" data-project="Projet QCMaster" data-description="Application mobile dans le style de KAHOOT">
+                    <img src="images/projet6.jpg" alt="Projet 6">
+                    <h3>QCMaster</h3>
+                </div>
+            </div>
+            
+            <div id="project-modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modal-title">Titre du Projet</h2>
+                    <p id="modal-description">Détails du projet...</p>
+                </div>
+            </div>
+            
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Redwan Berki. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
