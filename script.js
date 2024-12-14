@@ -130,19 +130,20 @@ const projectData = {
     },
     
     "Projet 4": {
-        title: "Infra Serveur Web",
+        title: "Puissance 4",
         description: `
             <h2>Contexte</h2>
-            <p>Création d’une infrastructure serveur web pour héberger des applications et bases de données, avec une configuration sécurisée.</p>
+            <p>Création d’un puissance 4 dans le langage Python, avec interface dans le terminal</p>
             <h2>Technologies utilisées</h2>
-            <p>Linux (Debian), Apache, MySQL</p>
+            <p>Python, CMD</p>
             <h2>Fonctionnalités principales</h2>
-            <p>- Hébergement sécurisé<br>- Monitoring et journalisation<br>- Optimisation des performances</p>
+            <p>- Jeu Puissance 4<br>- Joueur contre joueur<br>- Enregistrement des parties</p>
         `,
         buttons: [
-            { text: "Documentation", link: "https://docs.example.com/server-infra" }
+            { text: "Téléchargement", link: "puissance4.py" }
         ]
     },
+
     "Projet 5": {
         title: "QCMaster",
         description: `
@@ -187,6 +188,33 @@ galleryItems.forEach(img => {
         }
     });
 });
+
+function showProjectDetails(projectId) {
+    const project = projects[projectId];
+
+    // Remplir le titre et la description
+    document.getElementById("details-title").innerHTML = project.title;
+    document.getElementById("details-description").innerHTML = project.description;
+
+    // Générer les boutons
+    const buttonsContainer = document.getElementById("details-buttons");
+    buttonsContainer.innerHTML = ""; // Vider les anciens boutons
+
+    project.buttons.forEach(button => {
+        const btn = document.createElement("a");
+        btn.textContent = button.text;
+        btn.href = button.link;
+        btn.download = ""; // Force le téléchargement
+        btn.className = "project-button"; // Ajouter une classe pour styliser
+        buttonsContainer.appendChild(btn);
+    });
+
+    // Afficher la section des détails
+    document.getElementById("project-details").classList.remove("hidden");
+}
+
+// Exemple d'appel (appelle cette fonction dynamiquement selon l'interaction utilisateur)
+showProjectDetails("Projet 4");
 
 // Fermer les détails lorsqu’on clique sur la croix
 closeDetails.addEventListener("click", () => {
