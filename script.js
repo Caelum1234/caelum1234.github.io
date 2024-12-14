@@ -14,8 +14,6 @@ const competences = {
         "Agenda EPSI",
         "Star Wars",
         "Projet Voyage",
-        "Infra Serveur Web",
-        "Restauration WordPress",
         "QCMaster"
     ],
     "Répondre aux incidents et aux demandes d’assistance et d’évolution": [
@@ -31,21 +29,17 @@ const competences = {
         "Agenda EPSI",
         "Star Wars",
         "Projet Voyage",
-        "Infra Serveur Web",
-        "Restauration WordPress",
         "QCMaster"
     ],
     "Mettre à disposition des utilisateurs un service informatique": [
         "Agenda EPSI",
         "Star Wars",
         "Projet Voyage",
-        "Infra Serveur Web",
-        "Restauration WordPress",
+        "Puissance 4",
         "QCMaster"
     ],
     "Organiser son développement professionnel": [
         "Agenda EPSI",
-        "Restauration WordPress",
         "QCMaster"
     ]
 };
